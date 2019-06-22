@@ -1,0 +1,115 @@
+# Everything you need to know about configuring the CMS can be found here:-
+# https://www.netlifycms.org/docs/configuration-options/
+
+backend:
+  name: git-gateway # Netlify’s Git Gateway connects to Git provider’s API
+  branch: master # Branch to update (master by default)
+
+media_folder: "img" # Folder where user uploaded files should go
+
+publish_mode: editorial_workflow # Enable drafts
+
+collections: # A list of collections the CMS should be able to edit
+
+    # PAGES
+  - name: "page"
+    label: "Home Page"
+    folder: "pages"
+    sort: "title:asc"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+      - {label: "Name", name: "name", widget: "string", required: false}
+      - {label: "Permalink", name: "permalink", widget: "string"}
+      - {label: "Section", name: "section", widget: "hidden", default: "{{name}}"}
+      - {label: "Page Welcome", name: "body1", widget: "markdown", required: false}
+      - {label: "Info", name: "info", widget: "markdown", required: false}
+
+      - {label: "News Section One Title", name: "news_title_1", widget: "string", required: false}
+      - {label: "News Section One Body", name: "news_body_1", widget: "markdown", required: false}
+
+      - {label: "News Section Two Title", name: "news_title_2", widget: "string", required: false}
+      - {label: "News Section Two Body", name: "news_body_2", widget: "markdown", required: false}
+
+      - {label: "News Section Three Title", name: "news_title_3", widget: "string", required: false}
+      - {label: "News Section Three Body", name: "news_body_3", widget: "markdown", required: false}
+
+      
+      - {label: "Bot Developer", name: "bot_dev", widget: "markdown", required: false}
+      - {label: "Contact", name: "contact", widget: "markdown", required: false}
+
+      
+  - name: "contact"
+    label: "Contact Page"
+    folder: "contact"
+    sort: "title:asc"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+      - {label: "Name", name: "contact_name", widget: "string", required: false}
+      - {label: "Permalink", name: "permalink", widget: "string"}
+      - {label: "Section", name: "section", widget: "hidden", default: "{{name}}"}
+      - {label: "Page Body", name: "text", widget: "markdown", required: false}
+      - {label: "Form Link", name: "form", widget: "markdown"}
+      - {label: "Bot Developer", name: "bot_dev", widget: "markdown", required: false}
+      - {label: "Contact", name: "contact", widget: "markdown", required: false}
+
+
+  - name: "bot"
+    label: "Bot Page"
+    folder: "bot"
+    sort: "title:asc"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+      - {label: "Name", name: "bot_name", widget: "string", required: false}
+      - {label: "Permalink", name: "permalink", widget: "string"}
+      - {label: "Page Title", name: "name", widget: "string"}
+      - {label: "Section", name: "section", widget: "hidden", default: "{{name}}"}
+      - {label: "Paisley Park", name: "info", widget: "markdown", required: false}
+      - {label: "Reviews", name: "reviews", widget: "markdown"}
+      - {label: "Bot Developer", name: "bot_dev", widget: "markdown", required: false}
+      - {label: "Contact", name: "contact", widget: "markdown", required: false}
+
+  - name: "discord"
+    label: "Discord Page"
+    folder: "discord"
+    sort: "title:asc"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+      - {label: "Name", name: "disname", widget: "string", required: false}
+      - {label: "Permalink", name: "permalink", widget: "string"}
+      - {label: "Page Title", name: "name", widget: "string"}
+      - {label: "Section", name: "section", widget: "hidden", default: "{{name}}"}
+      - {label: "Paisley Park", name: "des", widget: "markdown", required: false}
+      - {label: "Bot Developer", name: "bot_dev", widget: "markdown", required: false}
+      - {label: "Contact", name: "contact", widget: "markdown", required: false}
+
+  - name: "staff"
+    label: "Staff Page"
+    folder: "staff"
+    sort: "title:asc"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+      - {label: "Name", name: "webname", widget: "string", required: false}
+      - {label: "Permalink", name: "permalink", widget: "string"}
+      - {label: "Section", name: "section", widget: "hidden", default: "{{name}}"}
+      - {label: "Intro Body", name: "intro", widget: "markdown"}
+      - {label: "Bot Description", name: "intro", widget: "markdown"}
+      - {label: "Bot Developer", name: "bot_dev", widget: "markdown", required: false}
+      - {label: "Contact", name: "contact", widget: "markdown", required: false}
+
+
+

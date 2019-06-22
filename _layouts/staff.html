@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ page.title }}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Avicity" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	
+ 			<link rel="stylesheet" href="css/bootstrap.min.css">
+ 				<script src="js/jquery.min.js">			</script>
+    		<script src="js/bootstrap.min.js">		</script>
+ 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){     
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},2000);
+            });
+        });
+    </script>
+
+<link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css " />
+<script src="js/easyResponsiveTabs.js"></script>
+	
+</head>
+<div class="header">
+		
+		<div class="nav">
+				<nav class="navbar navbar-inverse navbar-fixed-top">
+					<div class="container">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							   <a class="navbar-brand" href="#"><font size="5"><p>{{ page.webname }}</p></font>
+							</div>				
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="index">Home</a></li>
+								<li><a href="staff">Staff</a></li>
+								<li><a href="contact">Contact</a></li>
+								<li><a href="discord">Discord</a></li>
+								<li><a href="bot">Bot</a></li>
+	
+							</ul>
+							
+						</div>
+					</div>
+				</nav>
+			</div> 
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<font size="7"><p><b>Staff Team</b></p></font>
+	<div class="container">
+								
+			<div class="background shadow">
+					<div id="parentVerticalTab1">
+
+
+					<div class="col-md-7 trailer game-video">														
+							<div>
+								<div class="category1">
+									<p>{{ page.intro }}</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				
+				
+			
+				
+				  <div class="clearfix"></div>			
+				</div>
+
+		</div>
+	</div>
+</div>
+	<br>
+	<br>
+	<br>
+	<div class="about-image">
+		
+		<div class="col-md-4 about-size">
+			<div class="shadow">
+				<img src="./images/background.jpg" alt="image">
+			</div>
+			<h5>Great Plains Modding#0001</h5>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+		
+		</div>
+		
+		<div class="col-md-4 about-size">
+			<div class="shadow">
+				<img src="./images/background.jpg" alt="image">
+			</div>
+			<h5>Great Plains Modding#0001</h5>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+		
+		</div>
+		
+		<div class="col-md-4 about-size">
+			<div class="shadow">
+				<img src="./images/background.jpg" alt="image">
+			</div>
+			<h5>Great Plains Modding#0001</h5>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+		
+		</div>
+		<div class="about-image">
+
+	  <div class="clearfix"> </div>
+	</div>  
+	<div class="col-md-4 about-size">
+		<div class="shadow">
+			<img src="./images/background.jpg" alt="image">
+		</div>
+		<h5>Great Plains Modding#0001</h5>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+	
+	</div>
+	
+	<div class="col-md-4 about-size">
+		<div class="shadow">
+			<img src="./images/background.jpg" alt="image">
+		</div>
+		<h5>Great Plains Modding#0001</h5>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+	
+	</div>
+	
+	<div class="col-md-4 about-size">
+		<div class="shadow">
+			<img src="./images/background.jpg" alt="image">
+		</div>
+		<h5>Great Plains Modding#0001</h5>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+	
+	</div>
+  <div class="clearfix"> </div>
+</div>  
+	
+	
+</div> 	
+</div> 
+<!--Plug-in Initialisation-->
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        //Vertical Tab
+        $('#parentVerticalTab').easyResponsiveTabs({
+            type: 'vertical', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            closed: 'accordion', // Start closed if in accordion view
+            tabidentify: 'hor_1', // The tab groups identifier
+            activate: function(event) { 
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo2');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
+    });
+</script>
+<div class="contact" id="contact">
+	<div class="container">
+	  <div class="padding-contact">
+			  
+		  <div class="col-md-4 address">
+			<h3>Bot Developer:</h3>
+			  <address>
+  {{ page.bot_dev }}
+			  </address>
+		  </div>
+			  
+		  <div class="col-md-4 address">
+				  <h3>Contact Info:</h3>
+			  <address>
+  {{ page.contact }}
+			  </address>
+  
+		  </div>
+			  
+  
+			  
+		  <div class="footer">
+			  <p>© 2019 {{ page.webname }}. All Rights Reserved | Great Plains Modding</p>
+		  </div>
+	</div>
+  </div>
+	  
+  </body>
+  </html>
